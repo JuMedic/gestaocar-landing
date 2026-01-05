@@ -3,9 +3,10 @@ import { motion } from 'framer-motion';
 interface PhoneMockupProps {
   imageSrc?: string;
   delay?: number;
+  altText?: string;
 }
 
-const PhoneMockup = ({ imageSrc, delay = 0 }: PhoneMockupProps) => {
+const PhoneMockup = ({ imageSrc, delay = 0, altText = 'GestãoCar app dashboard screenshot' }: PhoneMockupProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -21,7 +22,7 @@ const PhoneMockup = ({ imageSrc, delay = 0 }: PhoneMockupProps) => {
         {/* Screen */}
         <div className="relative w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
           {imageSrc ? (
-            <img src={imageSrc} alt="App screenshot" className="w-full h-full object-cover" />
+            <img src={imageSrc} alt={altText} className="w-full h-full object-cover" />
           ) : (
             <div className="w-full h-full bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center p-6">
               <div className="space-y-4 w-full">

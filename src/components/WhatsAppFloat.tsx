@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
+import { config } from '../config';
 
 const WhatsAppFloat = () => {
   const handleWhatsAppClick = () => {
-    // Replace with actual WhatsApp number
-    window.open('https://wa.me/5511999999999', '_blank');
+    window.open(`https://wa.me/${config.whatsapp.phoneNumber}`, '_blank');
   };
 
   return (
